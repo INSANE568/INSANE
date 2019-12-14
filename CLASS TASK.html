@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+   <img id="pic">
+   
+   <h1 id="timeh"></h1>
+   
+   <!-- Строка, которую будем двигать-->
+<img id="line" style=" position:absolute;" src =7de149u-960.jpg>
+    <script>
+    
+        function ShowImg()
+        {
+            pic.src = "2D_GOBLIN__Run_000.png";
+        }
+        
+       
+      
+        //setTimeout(ShowImg,5000);
+        
+        var seconds = 55;
+        var minutes = 0;
+        
+        var colors = ["red","blue","yellow","pink","green"];
+        
+        function timer()
+        {
+            var index = Math.floor(Math.random() * 5);
+            seconds++;
+            if(seconds == 60)
+                {
+                    seconds = 0;
+                    minutes++;
+                    document.h1.innerHTML = minutes + " : " + seconds;
+                   
+                }
+            timeh.innerHTML = minutes + " : " + seconds;
+            timeh.style.backgroundColor = colors[index];
+            
+            if(minutes == 1)
+                {
+                    //прекратили работу интервала 
+                    clearInterval(timerId);
+                }
+        }
+        //запомнили id таймера 
+        var timerId = setInterval(timer,1000);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //задаем начальное положение строки
+ var x = 100;
+ line.style.left = x;
+
+ //шаг перемещения строки
+ var step = 2;
+ //правая граница перемещения строки
+ var right_border = 800;
+
+
+ //получаем длину строки
+ var len_text = parseInt(line.innerHTML.length);
+
+ function RunningLine() {
+         //получаем новые координаты строки для левого края
+         x =x+step;
+         //получаем новые координаты строки для правого края
+         var r = x + len_text * 10;
+         //если строка правым краем касается края тела
+         if (r >= right_border) {
+            x = 1; //возвращаем строку в начало страницы
+         }
+         line.style.left = x + "px";
+ }
+ //Вызываем функцию по таймеру
+ setInterval(RunningLine, 100);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    </script>
+    
+    
+</body>
+</html>
